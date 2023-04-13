@@ -1,4 +1,4 @@
-NAME = Arr
+NAME = stack
 
 CC = c++
 

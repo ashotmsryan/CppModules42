@@ -1,4 +1,4 @@
-NAME = Arr
+NAME = btc
 
 CC = c++
 

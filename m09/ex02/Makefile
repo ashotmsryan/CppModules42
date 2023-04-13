@@ -1,4 +1,4 @@
-NAME = Arr
+NAME = PmergeMe
 
 CC = c++
 

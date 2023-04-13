@@ -1,11 +1,11 @@
 # include "iter.hpp"
 
-void print(char a)
+void print(char const &a)
 {
 	std::cout << a << std::endl;
 }
 
-void print_nmb(int a)
+void print_nmb(int const &a)
 {
 	std::cout << a << std::endl;
 }

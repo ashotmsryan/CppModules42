@@ -1,8 +1,8 @@
-NAME = Arr
+NAME = easyfind
 
-CC = c++
+CXX = c++
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CXXFLAGS = -std=c++98 -Wall -Wextra -Werror
 
 SRCS = $(wildcard *.cpp)
 
@@ -11,12 +11,12 @@ OBJS = $(patsubst %.cpp, %.o, $(SRCS))
 RM = rm -f
 
 %.o: %.cpp
-	$(CC) -c $(CFLAGS) -c $< -o $@
+	$(CXX) -c $(CXXFLAGS) -c $< -o $@
 
 all: $(NAME)
 
 $(NAME): $(OBJS)
-	$(CC) $(CFLAGS) -o $(NAME) $(OBJS)
+	$(CXX) $(CXXFLAGS) -o $(NAME) $(OBJS)
 
 clean:
 	$(RM) $(OBJS)
