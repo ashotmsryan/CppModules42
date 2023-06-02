@@ -9,20 +9,22 @@ void	Harl::complain(std::string level)
 {
 	int i = -1;
 
-	while (++i != 4 && level.compare("DEBUG") && level.compare("INFO") && level.compare("WARNING") && level.compare("ERROR"));
+	void(Harl::*funcptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string	names[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	while (++i != 4 && names[i] != level);
 	switch (i)
 	{
 		case 0:
-			this->debug();	
+			(this->*funcptr[i])();
 		break;
 		case 1:
-			this->info();	
+			(this->*funcptr[i])();
 		break;
 		case 2:
-			this->warning();	
+			(this->*funcptr[i])();
 		break;
 		case 3:
-			this->error();	
+			(this->*funcptr[i])();
 			break;
 		default:
 			std::cout << "invalid LVL" << std::endl;

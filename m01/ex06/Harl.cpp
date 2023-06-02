@@ -1,30 +1,33 @@
 #include "Harl.hpp"
 
-void	Harl::debug(){std::cout << "[ DEBUG ]\n" << "I love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!" << std::endl;}
-void	Harl::info(){std::cout << "[ INFO ]\n" << "I cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!" << std::endl;}
-void	Harl::warning(){std::cout << "[ WARNING ]\n" << "I think I deserve to have some extra bacon for free. I've been coming foryears whereas you started working here since last month." << std::endl;}
-void	Harl::error(){std::cout << "[ ERROR ]\n" << "This is unacceptable! I want to speak to the manager now." << std::endl;}
+void	Harl::debug(){std::cout << "[ DEBUG ]\nI love having extra bacon for my 7XL-double-cheese-triple-pickle-specialketchup burger. I really do!\n" << std::endl;}
+void	Harl::info(){std::cout << "[ INFO ]\nI cannot believe adding extra bacon costs more money. You didn't put enough bacon in my burger! If you did, I wouldn't be asking for more!\n" << std::endl;}
+void	Harl::warning(){std::cout << "[ WARNING ]\nI think I deserve to have some extra bacon for free. I've been coming foryears whereas you started working here since last month.\n" << std::endl;}
+void	Harl::error(){std::cout << "[ ERROR ]\nThis is unacceptable! I want to speak to the manager now.\n" << std::endl;}
 
 void	Harl::complain(std::string level)
 {
 	int i = -1;
 
-	while (++i != 4 && level.compare("DEBUG") && level.compare("INFO") && level.compare("WARNING") && level.compare("ERROR"));
+	void(Harl::*funcptr[4])() = {&Harl::debug, &Harl::info, &Harl::warning, &Harl::error};
+	std::string	names[4] = {"DEBUG", "INFO", "WARNING", "ERROR"};
+	while (++i != 4 && names[i] != level);
 	switch (i)
 	{
 		case 0:
-			this->debug();	
-		break;
+			(this->*funcptr[i])();
+			i++;
+		;
 		case 1:
-			this->info();	
-		break;
+			(this->*funcptr[i])();
+			i++;
+		;
 		case 2:
-			this->warning();	
-		break;
+			(this->*funcptr[i])();
+			i++;
+		;
 		case 3:
-			this->error();	
+			(this->*funcptr[i])();
 			break;
-		default:
-			std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
 	}
 }
