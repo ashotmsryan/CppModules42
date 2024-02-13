@@ -6,7 +6,7 @@ WrongCat::WrongCat()
 	std::cout << "default ctor called for WrongCat!" << std::endl;
 }
 WrongCat::~WrongCat(){std::cout << "dctor called for WrongCat!" << std::endl;}
-WrongCat::WrongCat(const WrongCat &other){this->type = other.type;}
+WrongCat::WrongCat(const WrongCat &other):WrongAnimal(other){this->type = other.type;}
 
 const WrongCat &WrongCat::operator=(const WrongCat &other)
 {

@@ -16,16 +16,13 @@ void	Harl::complain(std::string level)
 	{
 		case 0:
 			(this->*funcptr[i])();
-			i++;
-		;
+			// Intentional fallthrough
 		case 1:
 			(this->*funcptr[i])();
-			i++;
-		;
+			// Intentional fallthrough
 		case 2:
 			(this->*funcptr[i])();
-			i++;
-		;
+			// Intentional fallthrough
 		case 3:
 			(this->*funcptr[i])();
 			break;

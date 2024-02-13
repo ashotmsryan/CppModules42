@@ -18,7 +18,7 @@ bool check_data(std::string str)
 
 bool check_nmb(std::string str)
 {
-	if (str.find_first_of("0123456789", 0) < SIZE_MAX)
+	if (str.find_first_of("0123456789", 0) < std::string::npos)
 		return (1);
 	return (0);
 }

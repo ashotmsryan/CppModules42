@@ -81,7 +81,7 @@ int		Span::longestSpan()
 
 void	Span::fullFill()
 {
-	std::srand(time(nullptr));
+	std::srand(time(NULL));
 	for (size_t i = 0; i < maxSize; i++)
 		nmb[i] = std::rand() % 100;
 }

@@ -9,7 +9,7 @@ class MutantStack : public std::stack<T>
 {
 public:
 	MutantStack(){};
-	MutantStack(MutantStack const &other){this->c = other.c;};
+	MutantStack(MutantStack const &other) : std::stack<T>(other){this->c = other.c;};
 	MutantStack &operator=(MutantStack const &other)
 	{
 		if (&other != this)

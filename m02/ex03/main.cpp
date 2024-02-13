@@ -14,10 +14,11 @@ int main( void )
 	// std::cout << Fixed::max(a, b) << std::endl;
 
 	Point a(1, 1);
-	Point b(2, 2);
-	Point c(2, 3);
+	Point b(1, 2);
+	Point c(0, 2);
 	Point point(1.5, 1.5);
 
+    //I tried to write my own bsp function
 	bsp(a,b,c,point);
 
 	return 0;

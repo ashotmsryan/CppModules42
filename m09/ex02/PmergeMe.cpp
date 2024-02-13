@@ -54,7 +54,7 @@ void	PmergeMe::emptyy()
 
 bool	PmergeMe::rangeValid(std::string nmb)
 {
-	int n = std::atoi(nmb.c_str());
+	int n = atoi(nmb.c_str());
 
 	int i = 0;
 	while (nmb[i] && (nmb[i] == '+' || nmb[i] == '-' || nmb[i] == '0'))

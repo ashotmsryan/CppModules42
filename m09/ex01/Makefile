@@ -2,7 +2,7 @@ NAME = RPN
 
 CC = c++
 
-CFLAGS = -std=c++98 -Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 SRCS = $(wildcard *.cpp)
 

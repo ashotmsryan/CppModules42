@@ -4,7 +4,7 @@
 
 Base *generate(void)
 {
-	std::srand(std::time(nullptr));
+	std::srand(time(nullptr));
 	Base	*a;
 
 	switch (std::rand() % 3)

@@ -11,7 +11,7 @@ Cat::~Cat()
 	delete this->mozg;
 	std::cout << "dctor called for Cat!" << std::endl;
 }
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other) : Animal(other)
 {
 	std::cout << "copy ctor called for Cat!" << std::endl;
 	this->type = other.type;

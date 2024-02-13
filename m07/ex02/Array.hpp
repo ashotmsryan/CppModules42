@@ -1,5 +1,6 @@
 #pragma once
 #include <iostream>
+#include <stdlib.h>
 
 # define BLACK	"\33[1;30m"
 # define RED	"\33[1;31m"
@@ -52,7 +53,7 @@ public:
 		if (index < 0 || index >= static_cast<int>(n))
 			throw std::out_of_range("out of range");
 
-			return (this->arr[index]);
+		return (this->arr[index]);
 	};
 	size_t size() const {return (this->n);};
 

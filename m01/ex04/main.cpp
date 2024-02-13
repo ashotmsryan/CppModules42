@@ -1,5 +1,4 @@
 #include "Replace.hpp"
-#include <unistd.h>
 
 std::string GetFileName(char *s)
 {
@@ -38,7 +37,7 @@ int main(int argc, char **argv)
 		if (file.fail())
 		{
 			std::cout << "No such a file !" << std::endl;
-			exit(1);
+			return 1;
 		}
 		while(file.good())
 		{
@@ -67,7 +66,7 @@ int main(int argc, char **argv)
 		file.close();
 		if (content[0])
 		{
-			std::ofstream newfile (GetFileName(argv[1]), std::ofstream::out); //open to write
+			std::ofstream newfile (GetFileName(argv[1]).c_str(), std::ofstream::out); //open to write
 			newfile << content;
 			newfile.close();
 		}

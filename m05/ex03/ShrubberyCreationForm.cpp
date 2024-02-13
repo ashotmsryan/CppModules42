@@ -34,7 +34,7 @@ void	ShrubberyCreationForm::execute(Bureaucrat const & executor) const
 
 	if (this->getSign() && executor.getGrade() < this->getGrade())
 	{
-		std::ofstream fil(this->target + "_shrubbery");
+		std::ofstream fil((this->target + "_shrubbery").c_str());
 		fil <<"              _{\' _{\'{\'/}/}/}__"  << std::endl;
 		fil <<"             {/{/\'}{/{/\'}(\'}{/\'} _" << std::endl;
 		fil <<"           {'/{/\'}{/{/\'}(_)\'}{/{/\'} " << std::endl;

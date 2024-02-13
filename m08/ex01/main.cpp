@@ -19,7 +19,7 @@ int main()
 		sp.addNumber(-20);
 		
 	}
-	catch(std::out_of_range n)
+	catch(std::out_of_range &n)
 	{
 		std::cerr << n.what() << std::endl; 
 	};

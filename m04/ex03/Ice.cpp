@@ -23,7 +23,7 @@ Ice &Ice::operator=(Ice &other)
 	return (*this);
 }
 
-Ice::Ice(Ice &other)
+Ice::Ice(Ice &other) : AMateria(other)
 {
 	std::cout << "copy ctor called for Ice!" << std::endl;
 	*this = other;

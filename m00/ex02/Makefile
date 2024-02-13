@@ -1,4 +1,4 @@
-NAME = phonebook
+NAME = banking
 
 CC = c++
 

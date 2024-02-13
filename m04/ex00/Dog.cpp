@@ -6,7 +6,7 @@ Dog::Dog()
 	std::cout << "default ctor called for Dog!" << std::endl;
 }
 Dog::~Dog(){std::cout << "dtor called for Dog!" << std::endl;}
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	std::cout << "copy ctor called for Dog!" << std::endl;
 	this->type = other.type;

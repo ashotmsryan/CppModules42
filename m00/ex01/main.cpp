@@ -10,7 +10,7 @@ int main()
 	while (1)
 	{
 		davo.clear();
-		std::cout << "Please insert command -> ";
+		std::cout << "Please insert command (EXIT, ADD, SEARCH) -> ";
 		getline(std::cin, davo);
 		if (std::cin.eof())
 			break ;

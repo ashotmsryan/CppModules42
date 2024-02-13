@@ -6,7 +6,7 @@ Cat::Cat()
 	std::cout << "default ctor called for Cat!" << std::endl;
 }
 Cat::~Cat(){std::cout << "dtor called for Cat!" << std::endl;}
-Cat::Cat(const Cat &other)
+Cat::Cat(const Cat &other) : Animal(other)
 {
 	std::cout << "copy ctor called for Cat!" << std::endl;
 	this->type = other.type;

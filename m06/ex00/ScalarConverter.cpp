@@ -159,17 +159,17 @@ std::string ScalarConverter::checkChar(std::string val)
 {
 	if (IsDigit(val))
 	{
-		int i = std::atoi(ScalarConverter::arg);
+		int i = atoi(ScalarConverter::arg);
 		return (orgnized(i));
 	}
 	else if (isFloatisDouble(val) == 1)
 	{
-		float i = std::atof(ScalarConverter::arg);
+		float i = atof(ScalarConverter::arg);
 		return (orgnized(static_cast<int>(i)));
 	}
 	else if (isFloatisDouble(val) == 2)
 	{
-		double i = std::atof(ScalarConverter::arg);
+		double i = atof(ScalarConverter::arg);
 		return (orgnized(static_cast<int>(i)));
 	}
 	else if (!IsDigit(val) && val.size() > 1)
@@ -184,17 +184,17 @@ int ScalarConverter::checkInt(std::string val)
 {
 	if (isFloatisDouble(val) == 1)
 	{
-		float a = std::atof(ScalarConverter::arg);
+		float a = atof(ScalarConverter::arg);
 		return (static_cast<int>(a));
 	}
 	else if (isFloatisDouble(val) == 2)
 	{
-		float a = std::atof(ScalarConverter::arg);
+		float a = atof(ScalarConverter::arg);
 		return (static_cast<int>(a));
 	}
 	else if (IsDigit(val))
 	{
-		int a = std::atoi(ScalarConverter::arg);
+		int a = atoi(ScalarConverter::arg);
 		return (a);
 	}
 	else if (val.size() == 1 && isprint(val[0]))

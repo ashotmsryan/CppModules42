@@ -11,7 +11,7 @@ Dog::~Dog()
 	delete this->mozg;
 	std::cout << "dctor called for Dog!" << std::endl;
 }
-Dog::Dog(const Dog &other)
+Dog::Dog(const Dog &other) : Animal(other)
 {
 	std::cout << "copy ctor called for Dog!" << std::endl;
 	this->mozg = new Brain();

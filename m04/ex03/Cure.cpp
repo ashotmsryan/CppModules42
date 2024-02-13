@@ -23,7 +23,7 @@ Cure &Cure::operator=(Cure &other)
 	return (*this);
 }
 
-Cure::Cure(Cure &other)
+Cure::Cure(Cure &other) : AMateria(other)
 {
 	std::cout << "copy ctor called for Cure!" << std::endl;
 	*this = other;
